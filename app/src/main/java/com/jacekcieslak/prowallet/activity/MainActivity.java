@@ -124,6 +124,10 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
                 fragment = new MessagesFragment();
                 title = getString(R.string.title_messages);
                 break;
+            case 3:
+                Intent intent = new Intent(this, OCRScannerActivity.class);
+                startActivity(intent);
+                break;
             default:
                 break;
         }
@@ -143,7 +147,7 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
     public void onClick(View v) {
         if(v.getTag().equals(TAG_BUTTON_MICROPHONE)){
             Toast.makeText(getApplicationContext(),
-                    "Powied¿ coœ ;)",
+                    "Powiedz cos ;)",
                     Toast.LENGTH_SHORT).show();
             promptSpeechInput();
         }
